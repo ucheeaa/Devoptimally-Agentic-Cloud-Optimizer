@@ -1,0 +1,165 @@
+{
+  "metadata": {
+    "environment_name": "production",
+    "cloud_provider": "AWS",
+    "account_id": "123456789012",
+    "snapshot_date": "2026-08-17"
+  },
+  "resources": [
+    {
+      "id": "i-0a1b2c3d4e5f67890",
+      "name": "web-server-01",
+      "service": "ec2",
+      "instance_type": "m5.2xlarge",
+      "region": "us-east-1",
+      "availability_zone": "us-east-1a",
+      "monthly_cost_usd": 280.00,
+      "utilization": {
+        "cpu_percent": 12,
+        "memory_percent": 18,
+        "network_mbps": 45,
+        "disk_iops": 200
+      },
+      "tags": {
+        "team": "frontend",
+        "env": "production"
+      }
+    },
+    {
+      "id": "i-0b2c3d4e5f6789011",
+      "name": "api-server-01",
+      "service": "ec2",
+      "instance_type": "m5.xlarge",
+      "region": "us-east-1",
+      "availability_zone": "us-east-1a",
+      "monthly_cost_usd": 140.00,
+      "utilization": {
+        "cpu_percent": 72,
+        "memory_percent": 68,
+        "network_mbps": 120,
+        "disk_iops": 800
+      },
+      "tags": {
+        "team": "backend",
+        "env": "production"
+      }
+    },
+    {
+      "id": "i-0c3d4e5f6789ab012",
+      "name": "batch-worker-01",
+      "service": "ec2",
+      "instance_type": "c5.4xlarge",
+      "region": "us-east-1",
+      "availability_zone": "us-east-1b",
+      "monthly_cost_usd": 490.00,
+      "utilization": {
+        "cpu_percent": 3,
+        "memory_percent": 2,
+        "network_mbps": 5,
+        "disk_iops": 10
+      },
+      "tags": {
+        "team": "data",
+        "env": "production"
+      }
+    },
+    {
+      "id": "db-0d4e5f6789ab1234",
+      "name": "primary-rds",
+      "service": "rds",
+      "instance_type": "db.r5.2xlarge",
+      "region": "us-east-1",
+      "availability_zone": "us-east-1a",
+      "monthly_cost_usd": 620.00,
+      "utilization": {
+        "cpu_percent": 35,
+        "memory_percent": 55,
+        "network_mbps": 80,
+        "disk_iops": 3000
+      },
+      "tags": {
+        "team": "backend",
+        "env": "production"
+      }
+    },
+    {
+      "id": "s3-0e5f6789ab12345f",
+      "name": "assets-bucket",
+      "service": "s3",
+      "instance_type": null,
+      "region": "us-east-1",
+      "availability_zone": "us-east-1",
+      "monthly_cost_usd": 95.00,
+      "utilization": {
+        "cpu_percent": 0,
+        "memory_percent": 0,
+        "network_mbps": 210,
+        "disk_iops": 0
+      },
+      "storage_gb": 4800,
+      "tags": {
+        "team": "frontend",
+        "env": "production"
+      }
+    },
+    {
+      "id": "lambda-0f678ab12345c6d7",
+      "name": "image-resize-fn",
+      "service": "lambda",
+      "instance_type": "128MB",
+      "region": "us-east-1",
+      "availability_zone": "us-east-1",
+      "monthly_cost_usd": 18.00,
+      "utilization": {
+        "cpu_percent": 15,
+        "memory_percent": 22,
+        "network_mbps": 8,
+        "disk_iops": 0
+      },
+      "invocations_per_month": 850000,
+      "tags": {
+        "team": "frontend",
+        "env": "production"
+      }
+    },
+    {
+      "id": "eks-0g789ab12345d7e8",
+      "name": "app-cluster",
+      "service": "eks",
+      "instance_type": "t3.large",
+      "region": "us-east-1",
+      "availability_zone": "us-east-1a",
+      "monthly_cost_usd": 350.00,
+      "node_count": 3,
+      "utilization": {
+        "cpu_percent": 88,
+        "memory_percent": 91,
+        "network_mbps": 300,
+        "disk_iops": 1200
+      },
+      "tags": {
+        "team": "platform",
+        "env": "production"
+      }
+    },
+    {
+      "id": "cache-0h8ab12345e8f9",
+      "name": "session-cache",
+      "service": "elasticache",
+      "instance_type": "cache.t3.medium",
+      "region": "us-east-1",
+      "availability_zone": "us-east-1b",
+      "monthly_cost_usd": 52.00,
+      "utilization": {
+        "cpu_percent": 8,
+        "memory_percent": 14,
+        "network_mbps": 20,
+        "disk_iops": 0
+      },
+      "tags": {
+        "team": "backend",
+        "env": "production"
+      }
+    }
+  ]
+}
