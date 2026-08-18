@@ -1,4 +1,4 @@
-# DevOptimally — Agentic Cloud Optimizer
+ # DevOptimally — Agentic Cloud Optimizer
 
 An agentic AI system built on **Amazon Bedrock** (Claude Sonnet 4.5) and the **Strands Agents SDK** that autonomously analyzes cloud infrastructure and delivers a single prioritized cost, performance, and architecture recommendation through a clean Streamlit UI.
 
